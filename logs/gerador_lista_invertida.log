@@ -1,0 +1,22 @@
+2024-04-14 18:38:02,901 - INFO - Lendo arquivo XML: data/cf74.xml
+2024-04-14 18:41:24,882 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf74.xml
+2024-04-14 18:41:24,898 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf75.xml
+2024-04-14 18:41:24,916 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf76.xml
+2024-04-14 18:41:24,944 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf77.xml
+2024-04-14 18:41:24,966 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf78.xml
+2024-04-14 18:41:24,982 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf79.xml
+2024-04-14 18:41:25,001 - INFO - Escrevendo lista invertida em C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\ista_invertida.csv
+2024-04-14 18:41:55,007 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf74.xml
+2024-04-14 18:41:55,023 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf75.xml
+2024-04-14 18:41:55,042 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf76.xml
+2024-04-14 18:41:55,071 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf77.xml
+2024-04-14 18:41:55,093 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf78.xml
+2024-04-14 18:41:55,110 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf79.xml
+2024-04-14 18:41:55,129 - INFO - Escrevendo lista invertida em C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\lista_invertida.csv
+2024-04-14 18:46:47,457 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf74.xml
+2024-04-14 18:46:47,473 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf75.xml
+2024-04-14 18:46:47,492 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf76.xml
+2024-04-14 18:46:47,522 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf77.xml
+2024-04-14 18:46:47,543 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf78.xml
+2024-04-14 18:46:47,559 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf79.xml
+2024-04-14 18:46:47,579 - INFO - Escrevendo lista invertida em C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\lista_invertida.csv

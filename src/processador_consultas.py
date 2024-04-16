@@ -2,17 +2,21 @@ import csv
 import xml.etree.ElementTree as ET
 import nltk
 import logging
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
 
 # Configuração do logger
-logging.basicConfig(filename='processador_consultas.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\src\\logs\\processador_consultas.log', 
+                    level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 # Recursos necessários NLTK
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
+
+# Importação de módulos NLTK
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
 
 # Lematizador
 lemmatizer = WordNetLemmatizer()
@@ -28,8 +32,22 @@ def preprocess_text(text):
     return ' '.join(lemmatized_tokens)
 
 # Ler consultas, pré-processar e escrever arquivos CSV
-def process_queries(xml_file, output_processed_file, output_expected_file):
+def process_queries(config_file):
     try:
+        # Leitura do arquivo de configuração
+        with open(config_file, 'r') as f:
+            lines = f.readlines()
+            for line in lines:
+                if line.startswith('LEIA='):
+                    xml_file = line.split('=')[1].strip()
+                elif line.startswith('CONSULTAS='):
+                    output_processed_file = line.split('=')[1].strip()
+                elif line.startswith('ESPERADOS='):
+                    output_expected_file = line.split('=')[1].strip()
+        # Especificar o caminho completo para a pasta resultados
+            output_processed_file = 'C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\consultas_processadas.csv'
+            output_expected_file ='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\resultados_esperados.csv'
+
         # Abrir arquivos CSV para escrever
         with open(output_processed_file, 'w', newline='') as processed_file, \
              open(output_expected_file, 'w', newline='') as expected_file:
@@ -73,10 +91,6 @@ def process_queries(xml_file, output_processed_file, output_expected_file):
         # Logging: Erro durante o processamento
         logging.error('Ocorreu um erro durante o processamento: {}'.format(str(e)))
 
-# Caminhos de entrada e saída
-xml_file = 'data/cfquery.xml'
-output_processed_file = 'resultados/consultas_processadas.csv'
-output_expected_file = 'resultados/resultados_esperados.csv'
-
-# Processamento das consultas
-process_queries(xml_file, output_processed_file, output_expected_file)
+# Teste do módulo Processador de Consultas
+if __name__ == "__main__":
+    process_queries('C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\config\\pc.cfg')

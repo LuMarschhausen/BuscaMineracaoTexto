@@ -1,0 +1,16 @@
+2024-04-14 17:37:24,879 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'buscamineracaotexto/config/pc.cfg'
+2024-04-14 17:39:45,114 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'computador/documentos/GitHub/BuscaMineracaoTexto/config/pc.cfg'
+2024-04-14 17:44:10,751 - INFO - Iniciando processamento das consultas.
+2024-04-14 17:44:10,752 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'data/cfquery.xml'
+2024-04-14 17:46:32,274 - INFO - Iniciando processamento das consultas.
+2024-04-14 17:46:32,276 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'cfquery.xml'
+2024-04-14 17:47:38,599 - INFO - Iniciando processamento das consultas.
+2024-04-14 17:47:38,599 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'cfquery.xml'
+2024-04-14 17:49:02,620 - INFO - Iniciando processamento das consultas.
+2024-04-14 17:49:03,626 - INFO - Processamento das consultas concluído.
+2024-04-14 18:27:43,469 - ERROR - Ocorreu um erro durante o processamento: [Errno 22] Invalid argument: 'C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\resultados_esperados.csv'
+2024-04-14 18:32:13,917 - ERROR - Ocorreu um erro durante o processamento: [Errno 22] Invalid argument: 'C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\resultados_esperados.csv'
+2024-04-14 18:33:43,767 - INFO - Iniciando processamento das consultas.
+2024-04-14 18:33:44,760 - INFO - Processamento das consultas concluído.
+2024-04-14 18:37:24,895 - INFO - Iniciando processamento das consultas.
+2024-04-14 18:37:25,918 - INFO - Processamento das consultas concluído.

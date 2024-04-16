@@ -1,14 +1,18 @@
+import os
 import xml.etree.ElementTree as ET
 import csv
-import os
 import logging
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
+# Verifica se o diretório "logs" existe, se não, cria
+log_dir = 'logs'
+os.makedirs(log_dir, exist_ok=True)
+
 # Configuração do logging
-logging.basicConfig(filename='logs/gerador_lista_invertida.log', level=logging.INFO,
+logging.basicConfig(filename=os.path.join(log_dir, 'gerador_lista_invertida.log'), level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 def processa_documento(texto):
@@ -54,14 +58,10 @@ def gerar_lista_invertida(arquivos_xml, arquivo_saida):
 
 if __name__ == "__main__":
     # Leitura das instruções do arquivo gli.cfg
-    with open('config/gli.cfg', 'r') as cfg_file:
+    with open('C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\config\\gli.cfg', 'r') as cfg_file:
         lines = cfg_file.readlines()
         arquivos_xml = [line.strip().split('=')[1] for line in lines if line.startswith('LEIA')]
         arquivo_saida = [line.strip().split('=')[1] for line in lines if line.startswith('ESCREVA')][0]
-
-    # Verifica se o diretório de logs existe, se não, cria
-    if not os.path.exists('logs'):
-        os.makedirs('logs')
 
     # Chamada para o gerador de lista invertida
     gerar_lista_invertida(arquivos_xml, arquivo_saida)
