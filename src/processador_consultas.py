@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import nltk
 import logging
 import string
+import time
 
 # Configuração do logger
 logging.basicConfig(filename='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\src\\logs\\processador_consultas.log', 
@@ -33,10 +34,19 @@ def preprocess_text(text):
     lemmatized_tokens = [lemmatizer.lemmatize(word) for word in filtered_tokens]
     return ' '.join(lemmatized_tokens)
 
+# Função para registrar o tempo atual
+def log_current_time():
+    return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+
 # Ler consultas, pré-processar e escrever arquivos CSV
 def process_queries(config_file):
     try:
+        # Logging: Início do processamento
+        logging.info('Iniciando processamento das consultas.')
+        start_time = time.time()
+
         # Leitura do arquivo de configuração
+        logging.info('Lendo arquivo de configuracao.')
         with open(config_file, 'r') as f:
             lines = f.readlines()
             for line in lines:
@@ -52,6 +62,7 @@ def process_queries(config_file):
         output_expected_file ='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\resultados_esperados.csv'
 
         # Abrir arquivos CSV para escrever
+        logging.info('Abrindo arquivos CSV para escrita.')
         with open(output_processed_file, 'w', newline='') as processed_file, \
              open(output_expected_file, 'w', newline='') as expected_file:
             
@@ -63,13 +74,13 @@ def process_queries(config_file):
             processed_writer.writerow(['QueryNumber', 'QueryText'])
             expected_writer.writerow(['QueryNumber', 'DocNumber', 'DocVotes'])   
 
-            # Logging: Início do processamento
-            logging.info('Iniciando processamento das consultas.')
-
             # Parsing do XML de consultas
+            logging.info('Analisando XML de consultas.')
             tree = ET.parse(xml_file)
             root = tree.getroot()
             
+            total_queries = len(root.findall('QUERY'))
+
             # Iterar sobre as consultas
             for query in root.findall('QUERY'):
                 query_number = query.find('QueryNumber').text
@@ -88,7 +99,10 @@ def process_queries(config_file):
                     expected_writer.writerow([query_number, doc_number, doc_votes])
             
             # Logging: Fim do processamento
-            logging.info('Processamento das consultas concluído.')
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            logging.info(f'Processamento das consultas concluido. Tempo total: {elapsed_time:.2f} segundos.')
+            logging.info(f'Numero total de consultas processadas: {total_queries}')
 
     except Exception as e:
         # Logging: Erro durante o processamento
