@@ -2,11 +2,11 @@ import csv
 import xml.etree.ElementTree as ET
 import nltk
 import logging
+import string
 
 # Configuração do logger
 logging.basicConfig(filename='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\src\\logs\\processador_consultas.log', 
                     level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 # Recursos necessários NLTK
 nltk.download('punkt')
@@ -23,6 +23,8 @@ lemmatizer = WordNetLemmatizer()
 
 # Pré-processamento texto da consulta
 def preprocess_text(text):
+    # Remover pontuações
+    text = text.translate(str.maketrans('', '', string.punctuation))
     # Tokenização
     tokens = word_tokenize(text)
     # Remover stopwords
@@ -44,9 +46,10 @@ def process_queries(config_file):
                     output_processed_file = line.split('=')[1].strip()
                 elif line.startswith('ESPERADOS='):
                     output_expected_file = line.split('=')[1].strip()
+        
         # Especificar o caminho completo para a pasta resultados
-            output_processed_file = 'C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\consultas_processadas.csv'
-            output_expected_file ='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\resultados_esperados.csv'
+        output_processed_file = 'C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\consultas_processadas.csv'
+        output_expected_file ='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\resultados_esperados.csv'
 
         # Abrir arquivos CSV para escrever
         with open(output_processed_file, 'w', newline='') as processed_file, \
