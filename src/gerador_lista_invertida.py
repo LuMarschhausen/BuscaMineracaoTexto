@@ -1,82 +1,85 @@
-import xml.etree.ElementTree as ET
-import nltk
-from nltk.tokenize import word_tokenize
 import csv
-from collections import defaultdict
-import re
+import xml.etree.ElementTree as ET
+import os
 
-# Baixe os recursos necessários do NLTK
-nltk.download('punkt')
+# Função para pré-processamento do texto
+def preprocess_text(text):
+    # Implemente aqui seu código de pré-processamento, se necessário
+    return text
 
-def ler_arquivo_configuracao(nome_arquivo):
-    instrucoes_leia = []
-    instrucao_escreva = None
-    with open(nome_arquivo, 'r') as file:
-        for linha in file:
-            if linha.startswith("LEIA="):
-                instrucoes_leia.append(linha.strip().split("=")[1])
-            elif linha.startswith("ESCREVA="):
-                instrucao_escreva = linha.strip().split("=")[1]
-    return instrucoes_leia, instrucao_escreva
+# Função para gerar a lista invertida
+def generate_inverted_index(xml_files, output_file):
+    # Dicionário para armazenar a lista invertida
+    inverted_index = {}
 
-def ler_arquivo_xml(nome_arquivo):
-    documentos = []
-    tree = ET.parse(nome_arquivo)
-    for doc in tree.findall('.//RECORD'):
-        recordnum = doc.find('RECORDNUM').text.strip()
-        abstract = doc.find('ABSTRACT')
-        if abstract is None:
-            extract = doc.find('EXTRACT')
-            texto = extract.text.strip() if extract is not None else ''
-        else:
-            texto = abstract.text.strip() if abstract is not None else ''
-        documentos.append((recordnum, texto))
-    return documentos
+    # Iterar sobre os arquivos XML
+    for xml_file in xml_files:
+        # Parsing do arquivo XML
+        tree = ET.parse(xml_file)
+        root = tree.getroot()
 
-def gerar_lista_invertida(arquivos_leitura):
-    lista_invertida = defaultdict(list)
-    for arquivo in arquivos_leitura:
-        documentos = ler_arquivo_xml(arquivo)
-        for recordnum, texto in documentos:
-            palavras = re.findall(r'\w+', texto)  # Extrai palavras do texto
-            for palavra in palavras:
-                lista_invertida[palavra.upper()].append(recordnum)
-    return lista_invertida
+        # Iterar sobre os registros do XML
+        for record in root.findall('RECORD'):
+            # Encontrar o texto do registro (ABSTRACT ou EXTRACT)
+            abstract_element = record.find('ABSTRACT')
+            extract_element = record.find('EXTRACT')
+            if abstract_element is not None:
+                abstract = abstract_element.text
+            elif extract_element is not None:
+                abstract = extract_element.text
+            else:
+                continue
 
-def escrever_lista_invertida(lista_invertida, nome_arquivo_saida):
-    with open(nome_arquivo_saida, 'w', newline='') as file:
-        writer = csv.writer(file, delimiter=';')
-        for palavra, documentos in lista_invertida.items():
-            writer.writerow([palavra, documentos])
+            # Pré-processamento do texto
+            processed_abstract = preprocess_text(abstract)
 
-def escrever_log(arquivos_leitura, lista_invertida, nome_arquivo_log):
-    with open(nome_arquivo_log, 'w') as log_file:
-        for arquivo in arquivos_leitura:
-            log_file.write(f"Documentos lidos de {arquivo}:\n")
-            documentos = ler_arquivo_xml(arquivo)
-            for recordnum, texto in documentos:
-                log_file.write(f"Recordnum: {recordnum}\n")
-                log_file.write(f"Texto: {texto}\n")
-            log_file.write("\n")
-        log_file.write("Lista Invertida:\n")
-        for palavra, documentos in lista_invertida.items():
-            log_file.write(f"{palavra}: {documentos}\n")
+            # Tokenização
+            tokens = processed_abstract.split()
+
+            # Construção da lista invertida
+            for token in tokens:
+                if token not in inverted_index:
+                    inverted_index[token] = set()
+                inverted_index[token].add(record.find('RECORDNUM').text)
+
+    # Escrever a lista invertida no arquivo CSV
+    with open(output_file, 'w', newline='', encoding='utf-8') as csv_file:
+        writer = csv.writer(csv_file, delimiter=';')
+
+        # Escrever cabeçalho
+        writer.writerow(['Palavra', 'Documentos'])
+
+        # Escrever lista invertida no arquivo CSV
+        for word, documents in inverted_index.items():
+            # Remover zeros à esquerda dos números de documento
+            cleaned_documents = [doc.lstrip('0') for doc in documents]
+            writer.writerow([word, cleaned_documents])
 
 # Leitura do arquivo de configuração
-instrucoes_leia, instrucao_escreva = ler_arquivo_configuracao("config/gli.cfg")
+def read_configuration(config_file):
+    xml_files = []
+    output_file = None
 
-# Leitura dos arquivos XML
-arquivos_leitura = instrucoes_leia
+    with open(config_file, 'r') as f:
+        lines = f.readlines()
+        for line in lines:
+            if line.startswith('LEIA='):
+                xml_files.append(line.split('=')[1].strip())
+            elif line.startswith('ESCREVA='):
+                output_file = line.split('=')[1].strip()
 
-# Geração da lista invertida
-lista_invertida = gerar_lista_invertida(arquivos_leitura)
+    return xml_files, output_file
 
-# Verificar se a lista invertida não está vazia
-print("Lista Invertida:")
-print(lista_invertida)
+# Função principal
+def main():
+    # Arquivo de configuração
+    config_file = 'config/gli.cfg'
 
-# Escrita da lista invertida em arquivo CSV
-escrever_lista_invertida(lista_invertida, instrucao_escreva)
+    # Ler configuração
+    xml_files, output_file = read_configuration(config_file)
 
-# Escrever o log
-escrever_log(arquivos_leitura, lista_invertida, "src/logs/gerador_lista_invertida.log")
+    # Gerar lista invertida
+    generate_inverted_index(xml_files, output_file)
+
+if __name__ == "__main__":
+    main()
