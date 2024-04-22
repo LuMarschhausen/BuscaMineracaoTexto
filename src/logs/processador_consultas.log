@@ -1,48 +1,24 @@
-2024-04-14 17:37:24,879 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'buscamineracaotexto/config/pc.cfg'
-2024-04-14 17:39:45,114 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'computador/documentos/GitHub/BuscaMineracaoTexto/config/pc.cfg'
-2024-04-14 17:44:10,751 - INFO - Iniciando processamento das consultas.
-2024-04-14 17:44:10,752 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'data/cfquery.xml'
-2024-04-14 17:46:32,274 - INFO - Iniciando processamento das consultas.
-2024-04-14 17:46:32,276 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'cfquery.xml'
-2024-04-14 17:47:38,599 - INFO - Iniciando processamento das consultas.
-2024-04-14 17:47:38,599 - ERROR - Ocorreu um erro durante o processamento: [Errno 2] No such file or directory: 'cfquery.xml'
-2024-04-14 17:49:02,620 - INFO - Iniciando processamento das consultas.
-2024-04-14 17:49:03,626 - INFO - Processamento das consultas concluído.
-2024-04-14 18:27:43,469 - ERROR - Ocorreu um erro durante o processamento: [Errno 22] Invalid argument: 'C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\resultados_esperados.csv'
-2024-04-14 18:32:13,917 - ERROR - Ocorreu um erro durante o processamento: [Errno 22] Invalid argument: 'C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\resultados_esperados.csv'
-2024-04-14 18:33:43,767 - INFO - Iniciando processamento das consultas.
-2024-04-14 18:33:44,760 - INFO - Processamento das consultas concluído.
-2024-04-14 18:37:24,895 - INFO - Iniciando processamento das consultas.
-2024-04-14 18:37:25,918 - INFO - Processamento das consultas concluído.
-2024-04-19 20:55:53,212 - INFO - Iniciando processamento das consultas.
-2024-04-19 20:55:54,219 - INFO - Processamento das consultas concluído.
-2024-04-19 21:14:47,840 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:14:48,843 - INFO - Processamento das consultas concluído.
-2024-04-19 21:19:28,233 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:19:29,224 - INFO - Processamento das consultas concluído.
-2024-04-19 21:20:50,180 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:20:51,158 - INFO - Processamento das consultas concluído.
-2024-04-19 21:21:15,616 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:21:16,629 - INFO - Processamento das consultas concluído.
-2024-04-19 21:22:09,085 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:22:10,052 - INFO - Processamento das consultas concluído.
-2024-04-19 21:22:32,288 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:22:33,270 - INFO - Processamento das consultas concluído.
-2024-04-19 21:44:55,201 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:44:55,201 - INFO - Lendo arquivo de configuração.
-2024-04-19 21:44:55,202 - INFO - Abrindo arquivos CSV para escrita.
-2024-04-19 21:44:55,202 - INFO - Analisando XML de consultas.
-2024-04-19 21:44:56,170 - INFO - Processamento das consultas concluído. Tempo total: 0.97 segundos.
-2024-04-19 21:44:56,170 - INFO - Número total de consultas processadas: 99
-2024-04-19 21:45:59,689 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:45:59,689 - INFO - Lendo arquivo de configuracao.
-2024-04-19 21:45:59,690 - INFO - Abrindo arquivos CSV para escrita.
-2024-04-19 21:45:59,691 - INFO - Analisando XML de consultas.
-2024-04-19 21:46:00,665 - INFO - Processamento das consultas concluido. Tempo total: 0.98 segundos.
-2024-04-19 21:46:00,665 - INFO - Número total de consultas processadas: 99
-2024-04-19 21:46:28,442 - INFO - Iniciando processamento das consultas.
-2024-04-19 21:46:28,442 - INFO - Lendo arquivo de configuracao.
-2024-04-19 21:46:28,442 - INFO - Abrindo arquivos CSV para escrita.
-2024-04-19 21:46:28,443 - INFO - Analisando XML de consultas.
-2024-04-19 21:46:29,435 - INFO - Processamento das consultas concluido. Tempo total: 0.99 segundos.
-2024-04-19 21:46:29,435 - INFO - Numero total de consultas processadas: 99
+2024-04-21 22:06:09,274 - INFO - Iniciando processamento das consultas.
+2024-04-21 22:06:09,274 - INFO - Lendo arquivo de configuracao.
+2024-04-21 22:06:09,274 - INFO - Abrindo arquivos CSV para escrita.
+2024-04-21 22:06:09,275 - INFO - Analisando XML de consultas.
+2024-04-21 22:06:10,231 - INFO - Processamento das consultas concluido. Tempo total: 0.96 segundos.
+2024-04-21 22:06:10,231 - INFO - Numero total de consultas processadas: 99
+2024-04-21 22:06:30,550 - INFO - Iniciando processamento das consultas.
+2024-04-21 22:06:30,551 - INFO - Lendo arquivo de configuracao.
+2024-04-21 22:06:30,551 - INFO - Abrindo arquivos CSV para escrita.
+2024-04-21 22:06:30,552 - INFO - Analisando XML de consultas.
+2024-04-21 22:06:31,515 - INFO - Processamento das consultas concluido. Tempo total: 0.96 segundos.
+2024-04-21 22:06:31,515 - INFO - Numero total de consultas processadas: 99
+2024-04-21 22:08:41,094 - INFO - Iniciando processamento das consultas.
+2024-04-21 22:08:41,094 - INFO - Lendo arquivo de configuracao.
+2024-04-21 22:08:41,094 - INFO - Abrindo arquivos CSV para escrita.
+2024-04-21 22:08:41,095 - INFO - Analisando XML de consultas.
+2024-04-21 22:08:42,062 - INFO - Processamento das consultas concluido. Tempo total: 0.97 segundos.
+2024-04-21 22:08:42,062 - INFO - Numero total de consultas processadas: 99
+2024-04-21 22:12:05,237 - INFO - Iniciando processamento das consultas.
+2024-04-21 22:12:05,237 - INFO - Lendo arquivo de configuração.
+2024-04-21 22:12:05,238 - INFO - Abrindo arquivos CSV para escrita.
+2024-04-21 22:12:05,238 - INFO - Analisando XML de consultas.
+2024-04-21 22:12:06,192 - INFO - Processamento das consultas concluído. Tempo total: 0.96 segundos.
+2024-04-21 22:12:06,193 - INFO - Número total de consultas processadas: 99

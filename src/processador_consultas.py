@@ -6,7 +6,7 @@ import string
 import time
 
 # Configuração do logger
-logging.basicConfig(filename='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\src\\logs\\processador_consultas.log', 
+logging.basicConfig(filename='src/logs/processador_consultas.log', 
                     level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Recursos necessários NLTK
@@ -45,8 +45,12 @@ def process_queries(config_file):
         logging.info('Iniciando processamento das consultas.')
         start_time = time.time()
 
+        xml_file = None
+        output_processed_file = None
+        output_expected_file = None
+
         # Leitura do arquivo de configuração
-        logging.info('Lendo arquivo de configuracao.')
+        logging.info('Lendo arquivo de configuração.')
         with open(config_file, 'r') as f:
             lines = f.readlines()
             for line in lines:
@@ -57,9 +61,9 @@ def process_queries(config_file):
                 elif line.startswith('ESPERADOS='):
                     output_expected_file = line.split('=')[1].strip()
         
-        # Especificar o caminho completo para a pasta resultados
-        output_processed_file = 'C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\consultas_processadas.csv'
-        output_expected_file ='C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\resultados_esperados.csv'
+        if xml_file is None or output_processed_file is None or output_expected_file is None:
+            logging.error('Arquivo de configuração incompleto. Certifique-se de incluir as instruções LEIA, CONSULTAS e ESPERADOS.')
+            return
 
         # Abrir arquivos CSV para escrever
         logging.info('Abrindo arquivos CSV para escrita.')
@@ -101,8 +105,8 @@ def process_queries(config_file):
             # Logging: Fim do processamento
             end_time = time.time()
             elapsed_time = end_time - start_time
-            logging.info(f'Processamento das consultas concluido. Tempo total: {elapsed_time:.2f} segundos.')
-            logging.info(f'Numero total de consultas processadas: {total_queries}')
+            logging.info(f'Processamento das consultas concluído. Tempo total: {elapsed_time:.2f} segundos.')
+            logging.info(f'Número total de consultas processadas: {total_queries}')
 
     except Exception as e:
         # Logging: Erro durante o processamento
@@ -110,4 +114,4 @@ def process_queries(config_file):
 
 # Teste do módulo Processador de Consultas
 if __name__ == "__main__":
-    process_queries('C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\config\\pc.cfg')
+    process_queries('config/pc.cfg')
