@@ -1,100 +1,100 @@
 QueryNumber;QueryText
-00001;effect calcium physical property mucus CF patient
-00002;one distinguish effect mucus hypersecretion infection submucosal gland respiratory tract CF
-00003;salivary glycoprotein CF patient different normal subject
-00004;lipid composition CF respiratory secretion
-00005;CF mucus abnormal
-00006;effect water therapeutic agent physical property viscosity elasticity sputum bronchial secretion CF patient
-00007;mucus glycoprotein degraded differently CF patient compared normal subject
-00008;histochemical difference described normal CF respiratory epithelium
-00009;association liver disease cirrhosis vitamin metabolism CF
-00010;role Vitamin E therapy patient CF
-00011;difference meconium ileus meconium plug syndrome
-00012;abnormality amino acid transport described small bowel CF patient
-00013;clinical biochemical feature pancreatitis CF patient
-00014;noninvasive test performed evaluation exocrine pancreatic function patient CF
-00015;hepatic complication manifestation CF
-00016;gastrointestinal complication CF neonatal period exclude liver disease meconium ileus
-00017;effective regimen use pancreatic enzyme supplement treatment CF patient
-00018;dietary supplementation bile salt therapeutic benefit CF patient
-00019;complication pancreatic enzyme therapy reported CF patient
-00020;effect treatment CF patient essential fatty acid supplement
-00021;pancreatic insufficiency CF patient affect ability absorb metabolize iron
-00022;frequency CF nonCaucasian population
-00023;congenital hereditary disease condition found association CF
-00024;characteristic patient CF incompletely manifested
-00025;evidence genetic basis CF involves one gene
-00026;heterozygote advantage CF
-00027;concordance clinical biochemical manifestation CF sibling pair CF
-00028;incidence male fertility CF
-00029;pathology reproductive system male female CF
-00030;result genetic counseling family child CF
-00031;major psychological social effect CF patient family
-00032;factor influence compliance prescribed therapy CF patient
-00033;condition factor lead erroneous sweat test
-00034;alternative technique classical GibsonCooke quantitative pilocarpine iontophoresis test titrimetric analysis chloride available sweat testing relative advantage disadvantage
-00035;CF patient found consistently normal sweat test
-00036;concentration potassium sweat CF patient
-00037;technique available screening newborn infant CF factor contribute erroneous result test
-00038;CF diagnosed prenatally
-00039;may heterozygote CF identified
-00040;sweat test technique may useful beyond neonatal period diagnosis CF
-00041;Vitamin metabolism normal CF patient
-00042;abnormality insulin secretion insulin metabolism occur CF patient
-00043;salt sodium andor chloride transportpermeability abnormal CF
-00044;structural enzymatic difference fibroblast CF patient nonCF patient
-00045;abnormality prostaglandin metabolism described CF patient
-00046;property activity galactosyltransferase enzyme CF patient
-00047;difference normal subject CF patient described function metabolism hormone
-00048;fibroblast CF patient grow normal rate
-00049;RNA methylation polyamine metabolism normal CF patient
-00050;defect synthesis metabolism cyclic nucleotide described CF patient
-00051;circulating secreted factor described CF patient Factors unidentified biologically active molecule thought play pathogenetic role cystic fibrosis
-00052;known prolactin CF patient
-00053;secretory IgA protect CF patient bacterial colonization infection
-00054;relationship allergy hypersensitivity lung disease CF patient
-00055;interaction protease endogenous bacterial origin antiproteases lung CF patient
-00056;relationship nutrition pulmonary host defense bacterial infection CF patient
-00057;pathophysiologic role circulating antibody Pseudomonas aeruginosa CF patient
-00058;immunologic response pulmonary infection CF patient
-00059;immunologic abnormality found CF patient
-00060;effect CF pulmonary circulation
-00061;defect mucociliary transport clearance respiratory tract CF patient
-00062;clinical feature lung disease CF patient
-00063;biochemical microscopic characteristic airway inflammation CF patient
-00064;lung function change time CF patient time period greater day
-00065;abnormality pulmonary function CF patient
-00066;pathologic feature lung disease CF patient
-00067;prognosis patient episode respiratory failure
-00068;effect bronchodilator CF patient
-00069;best way treat pneumothorax CF patient
-00070;treatment prognosis hemoptysis CF patient
-00071;prognosis infant wheezing cystic fibrosis
-00072;best treatment nasal polyp CF patient
-00073;effective bronchial lavage CF patient
-00074;result mechanical ventilation CF patient respiratory failure
-00075;best treatment pulmonary hypertension andor cor pulmonale CF patient
-00076;effect exercise training program lung function CF patient
-00077;technique effective promoting clearance mucus lung CF patient
-00078;special consideration treatment CF patient antibiotic ie pharmacodynamics antibiotic different CF patient special problem peculiar CF
-00079;role orally administered antibiotic treatment CF patient
-00080;evidence combination therapy aminoglycosides semisynthetic penicillin effective therapy either alone
-00081;effective inhalation mucolytic agent treatment CF patient
-00082;role aerosol treatment lung disease CF patient
-00083;role bacterial phagocytosis alveolar macrophage polymorphonuclear leukocyte lung disease CF patient
-00084;relationship Haemophilus influenzae Pseudomonas aeruginosa CF patient
-00085;CF patient ever develop infection organ lung organ
-00086;role bacteria Pseudomonas aeruginosa Staphylococcus aureus Haemophilus influenzae pathogenesis lung disease CF patient
-00087;role fungi pathogenesis lung disease CF patient
-00088;role viral infection lung disease CF patient
-00089;epidemiology Pseudomonas aeruginosa CF patient Specifically CF patient spread Pseudomonas aeruginosa patient individual family
-00090;factor responsible appearance mucoid strain Pseudomonas aeruginosa CF patient
-00091;unusual manifestation CF lung disease exocrine pancreatic insufficiency
-00092;prognosis survival patient CF
-00094;animal model available relevant CF
-00095;abnormality skeletal muscle function structure found CF patient
-00096;increased incidence dental problem eg caries periodontal disease CF patient
-00097;oxygen transport red blood cell abnormal CF patient
-00098;effect CF development andor function brain central nervous system
-00099;abnormality taste CF patient
-00100;incidence treatment hypertrophic osteoarthropathy CF patient
+1;EFFECTS CALCIUM PHYSICAL PROPERTIES MUCUS
+2;ONE DISTINGUISH EFFECTS MUCUS HYPERSECRETION INFECTION SUBMUCOSAL GLANDS RESPIRATORY TRACT
+3;SALIVARY GLYCOPROTEINS DIFFERENT NORMAL SUBJECTS
+4;LIPID COMPOSITION RESPIRATORY SECRETIONS
+5;MUCUS ABNORMAL
+6;EFFECT WATER THERAPEUTIC AGENTS PHYSICAL PROPERTIES VISCOSITY ELASTICITY SPUTUM BRONCHIAL SECRETIONS
+7;MUCUS GLYCOPROTEINS DEGRADED DIFFERENTLY COMPARED NORMAL SUBJECTS
+8;HISTOCHEMICAL DIFFERENCES DESCRIBED NORMAL RESPIRATORY EPITHELIA
+9;ASSOCIATION LIVER DISEASE CIRRHOSIS VITAMIN METABOLISM
+10;ROLE VITAMIN THERAPY
+11;DIFFERENCE MECONIUM ILEUS MECONIUM PLUG SYNDROME
+12;ABNORMALITIES AMINO ACID TRANSPORT DESCRIBED SMALL BOWEL
+13;CLINICAL BIOCHEMICAL FEATURES PANCREATITIS
+14;NON INVASIVE TESTS PERFORMED EVALUATION EXOCRINE PANCREATIC FUNCTION
+15;HEPATIC COMPLICATIONS MANIFESTATIONS
+16;GASTROINTESTINAL COMPLICATIONS NEONATAL PERIOD EXCLUDE LIVER DISEASE MECONIUM ILEUS
+17;EFFECTIVE REGIMEN USE PANCREATIC ENZYME SUPPLEMENTS TREATMENT
+18;DIETARY SUPPLEMENTATION BILE SALTS THERAPEUTIC BENEFIT
+19;COMPLICATIONS PANCREATIC ENZYME THERAPY REPORTED
+20;EFFECT TREATMENT ESSENTIAL FATTY ACID SUPPLEMENTS
+21;PANCREATIC INSUFFICIENCY AFFECT ABILITY ABSORB METABOLIZE IRON
+22;FREQUENCY NON CAUCASIAN POPULATIONS
+23;CONGENITAL HEREDITARY DISEASES CONDITIONS FOUND ASSOCIATION
+24;CHARACTERISTICS INCOMPLETELY MANIFESTED
+25;EVIDENCE GENETIC BASIS INVOLVES ONE GENE
+26;HETEROZYGOTE ADVANTAGE
+27;CONCORDANCE CLINICAL BIOCHEMICAL MANIFESTATIONS SIBLING PAIRS
+28;INCIDENCE MALE FERTILITY
+29;PATHOLOGY REPRODUCTIVE SYSTEM MALE FEMALE
+30;RESULTS GENETIC COUNSELING FAMILIES CHILDREN
+31;MAJOR PSYCHOLOGICAL SOCIAL EFFECTS FAMILIES
+32;FACTORS INFLUENCE COMPLIANCE PRESCRIBED THERAPY
+33;CONDITIONS FACTORS LEAD ERRONEOUS SWEAT TESTS
+34;ALTERNATIVE TECHNIQUES CLASSICAL GIBSON COOKE QUANTITATIVE PILOCARPINE IONTOPHORESIS TEST TITRIMETRIC ANALYSIS CHLORIDE AVAILABLE SWEAT TESTING RELATIVE ADVANTAGES DISADVANTAGES
+35;PATIENT FOUND CONSISTENTLY NORMAL SWEAT TESTS
+36;CONCENTRATION POTASSIUM SWEAT
+37;TECHNIQUES AVAILABLE SCREENING NEWBORN INFANTS FACTORS CONTRIBUTE ERRONEOUS RESULTS TESTS
+38;DIAGNOSED PRENATALLY
+39;MAY HETEROZYGOTES IDENTIFIED
+40;SWEAT TEST TECHNIQUES MAY USEFUL BEYOND NEONATAL PERIOD DIAGNOSIS
+41;VITAMIN METABOLISM NORMAL
+42;ABNORMALITIES INSULIN SECRETION INSULIN METABOLISM OCCUR
+43;SALT SODIUM CHLORIDE TRANSPORT PERMEABILITY ABNORMAL
+44;STRUCTURAL ENZYMATIC DIFFERENCES FIBROBLASTS NON
+45;ABNORMALITIES PROSTAGLANDIN METABOLISM DESCRIBED
+46;PROPERTIES ACTIVITY GALACTOSYLTRANSFERASE ENZYMES
+47;DIFFERENCES NORMAL SUBJECTS DESCRIBED FUNCTION METABOLISM HORMONES
+48;FIBROBLASTS GROW NORMAL RATE
+49;RNA METHYLATION POLYAMINE METABOLISM NORMAL
+50;DEFECTS SYNTHESIS METABOLISM CYCLIC NUCLEOTIDES DESCRIBED
+51;CIRCULATING SECRETED FACTORS DESCRIBED FACTORS UNIDENTIFIED BIOLOGICALLY ACTIVE MOLECULES THOUGHT PLAY PATHOGENETIC ROLE CYSTIC FIBROSIS
+52;KNOWN PROLACTIN
+53;SECRETORY IGA PROTECT BACTERIAL COLONIZATION INFECTION
+54;RELATIONSHIP ALLERGY HYPERSENSITIVITY LUNG DISEASE
+55;INTERACTIONS PROTEASES ENDOGENOUS BACTERIAL ORIGIN ANTIPROTEASES LUNGS
+56;RELATIONSHIP NUTRITION PULMONARY HOST DEFENSES BACTERIAL INFECTION
+57;PATHOPHYSIOLOGIC ROLE CIRCULATING ANTIBODIES PSEUDOMONAS AERUGINOSA
+58;IMMUNOLOGIC RESPONSE PULMONARY INFECTION
+59;IMMUNOLOGIC ABNORMALITIES FOUND
+60;EFFECTS PULMONARY CIRCULATION
+61;DEFECT MUCOCILIARY TRANSPORT CLEARANCE RESPIRATORY TRACT
+62;CLINICAL FEATURES LUNG DISEASE
+63;BIOCHEMICAL MICROSCOPIC CHARACTERISTICS AIRWAY INFLAMMATION
+64;LUNG FUNCTION CHANGE TIME TIME PERIODS GREATER DAY
+65;ABNORMALITIES PULMONARY FUNCTION
+66;PATHOLOGIC FEATURES LUNG DISEASE
+67;PROGNOSIS EPISODE RESPIRATORY FAILURE
+68;EFFECTS BRONCHODILATORS
+69;BEST WAY TREAT PNEUMOTHORAX
+70;TREATMENT PROGNOSIS HEMOPTYSIS
+71;PROGNOSIS INFANTS WHEEZING CYSTIC FIBROSIS
+72;BEST TREATMENT NASAL POLYPS
+73;EFFECTIVE BRONCHIAL LAVAGE
+74;RESULTS MECHANICAL VENTILATION RESPIRATORY FAILURE
+75;BEST TREATMENT PULMONARY HYPERTENSION COR PULMONALE
+76;EFFECTS EXERCISE TRAINING PROGRAMS LUNG FUNCTION
+77;TECHNIQUES EFFECTIVE PROMOTING CLEARANCE MUCUS LUNGS
+78;SPECIAL CONSIDERATIONS TREATMENT ANTIBIOTICS IE PHARMACODYNAMICS ANTIBIOTICS DIFFERENT SPECIAL PROBLEMS PECULIAR
+79;ROLE ORALLY ADMINISTERED ANTIBIOTICS TREATMENT
+80;EVIDENCE COMBINATION THERAPY AMINOGLYCOSIDES SEMISYNTHETIC PENICILLINS EFFECTIVE THERAPY EITHER ALONE
+81;EFFECTIVE INHALATIONS MUCOLYTIC AGENTS TREATMENT
+82;ROLE AEROSOLS TREATMENT LUNG DISEASE
+83;ROLE BACTERIAL PHAGOCYTOSIS ALVEOLAR MACROPHAGES POLYMORPHONUCLEAR LEUKOCYTES LUNG DISEASE
+84;RELATIONSHIP HAEMOPHILUS INFLUENZAE PSEUDOMONAS AERUGINOSA
+85;EVER DEVELOP INFECTION ORGANS LUNG ORGANS
+86;ROLE BACTERIA PSEUDOMONAS AERUGINOSA STAPHYLOCOCCUS AUREUS HAEMOPHILUS INFLUENZAE PATHOGENESIS LUNG DISEASE
+87;ROLE FUNGI PATHOGENESIS LUNG DISEASE
+88;ROLE VIRAL INFECTION LUNG DISEASE
+89;EPIDEMIOLOGY PSEUDOMONAS AERUGINOSA SPECIFICALLY SPREAD PSEUDOMONAS AERUGINOSA INDIVIDUALS FAMILY
+90;FACTORS RESPONSIBLE APPEARANCE MUCOID STRAINS PSEUDOMONAS AERUGINOSA
+91;UNUSUAL MANIFESTATIONS LUNG DISEASE EXOCRINE PANCREATIC INSUFFICIENCY
+92;PROGNOSIS SURVIVAL
+94;ANIMAL MODELS AVAILABLE RELEVANT
+95;ABNORMALITIES SKELETAL MUSCLE FUNCTION STRUCTURE FOUND
+96;INCREASED INCIDENCE DENTAL PROBLEMS EG CARIES PERIODONTAL DISEASE
+97;OXYGEN TRANSPORT RED BLOOD CELLS ABNORMAL
+98;EFFECTS DEVELOPMENT FUNCTION BRAIN CENTRAL NERVOUS SYSTEM
+99;ABNORMALITIES TASTE
+100;INCIDENCE TREATMENT HYPERTROPHIC OSTEOARTHROPATHY

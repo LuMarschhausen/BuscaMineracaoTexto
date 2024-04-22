@@ -148,3 +148,29 @@
 2024-04-22 16:03:05,746 - INFO - Lendo arquivo de configuracao.
 2024-04-22 16:03:05,747 - ERROR - Arquivo de configuracao incompleto. Certifique-se de incluir as instruções LEIA e ESCREVA.
 2024-04-22 16:03:05,747 - INFO - Lendo XML: data/documentos_xml/cf74.xml
+2024-04-22 17:24:09,204 - INFO - Iniciando processamento das consultas.
+2024-04-22 17:24:09,204 - INFO - Lendo arquivo de configuracao.
+2024-04-22 17:24:09,204 - INFO - Abrindo arquivos CSV para escrita.
+2024-04-22 17:24:09,205 - INFO - Analisando XML de consultas.
+2024-04-22 17:24:09,252 - INFO - Processamento das consultas concluido. Tempo total: 0.05 segundos.
+2024-04-22 17:24:09,252 - INFO - Numero total de consultas processadas: 99
+2024-04-22 17:26:41,747 - INFO - Iniciando processamento das consultas.
+2024-04-22 17:26:41,747 - INFO - Lendo arquivo de configuracao.
+2024-04-22 17:26:41,748 - INFO - Abrindo arquivos CSV para escrita.
+2024-04-22 17:26:41,748 - INFO - Analisando XML de consultas.
+2024-04-22 17:26:41,795 - INFO - Processamento das consultas concluido. Tempo total: 0.05 segundos.
+2024-04-22 17:26:41,795 - INFO - Numero total de consultas processadas: 99
+2024-04-22 17:28:29,124 - INFO - Iniciando processamento das consultas.
+2024-04-22 17:28:29,124 - INFO - Lendo arquivo de configuracao.
+2024-04-22 17:28:29,124 - INFO - Abrindo arquivos CSV para escrita.
+2024-04-22 17:28:29,125 - INFO - Analisando XML de consultas.
+2024-04-22 17:28:29,862 - INFO - Processamento das consultas concluido. Tempo total: 0.74 segundos.
+2024-04-22 17:28:29,862 - INFO - Numero total de consultas processadas: 99
+2024-04-22 17:30:54,099 - INFO - Iniciando processamento das consultas.
+2024-04-22 17:30:54,099 - INFO - Lendo arquivo de configuracao.
+2024-04-22 17:30:54,099 - INFO - Abrindo arquivos CSV para escrita.
+2024-04-22 17:30:54,100 - INFO - Analisando XML de consultas.
+2024-04-22 17:30:54,903 - INFO - Processamento das consultas concluido. Tempo total: 0.80 segundos.
+2024-04-22 17:30:54,903 - INFO - Numero total de consultas processadas: 99
+2024-04-22 17:34:38,206 - INFO - Iniciando processamento das consultas.
+2024-04-22 17:34:38,207 - ERROR - Ocorreu um erro durante o processamento: name 'time' is not defined

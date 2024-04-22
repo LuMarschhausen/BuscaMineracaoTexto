@@ -1,36 +1,60 @@
-Trabalho de Busca e Mineração de Texto
-Este repositório contém um conjunto de scripts Python desenvolvidos para processar consultas, gerar uma lista invertida a partir de documentos em formato XML ter um indexador e modelo vetorial.
+Busca e Mineração de Texto
+Este repositório contém código Python para processamento de consultas, geração de listas invertidas e indexação de documentos para busca e mineração de texto.
 
 Processador de Consultas
-O Processador de Consultas é responsável por ler consultas em formato XML, pré-processar o texto dessas consultas e gravar as consultas pré-processadas em um arquivo CSV. Além disso, também lê os resultados esperados das consultas e os grava em outro arquivo CSV.
+O módulo processador_consultas.py lê consultas em formato XML, pré-processa o texto e escreve os resultados em arquivos CSV. Ele utiliza NLTK para pré-processamento de texto, incluindo remoção de pontuação e stopwords e lematização de palavras.
 
-Arquivos e Configuração
-processador_consultas.py: Script principal que processa as consultas.
-config/pc.cfg: Arquivo de configuração que especifica os arquivos de entrada e saída.
-Pré-processamento de Texto
-O pré-processamento do texto das consultas envolve as seguintes etapas:
+Arquivo de Configuração
+O arquivo de configuração config/pc.cfg contém as seguintes linhas:
 
-Remoção de pontuações.
-Tokenização do texto.
-Remoção de stopwords.
-Lematização das palavras.
+bash
+
+LEIA=data/consultas_xml/consultas.xml
+CONSULTAS=resultados/consultas_processadas.csv
+ESPERADOS=resultados/resultados_esperados.csv
+Execução
+Para executar o processador de consultas, utilize o seguinte comando:
+
+
+python processador_consultas.py
 Gerador de Lista Invertida
-O Gerador de Lista Invertida lê um conjunto de arquivos XML especificados em um arquivo de configuração, extrai o texto dos documentos, cria uma lista invertida das palavras nos documentos e grava essa lista invertida em um arquivo CSV.
+O módulo gerador_lista_invertida.py lê documentos em formato XML, extrai o texto dos registros e gera uma lista invertida simples. Ele utiliza NLTK para pré-processamento de texto, incluindo tokenização e remoção de stopwords.
 
-Arquivos e Configuração
-gerador_lista_invertida.py: Script principal que gera a lista invertida.
-GLI.cfg: Arquivo de configuração que especifica os arquivos XML de entrada e o arquivo CSV de saída.
-Pré-processamento de Texto
-O pré-processamento do texto dos documentos envolve as seguintes etapas:
+Arquivo de Configuração
+O arquivo de configuração config/gli.cfg contém as seguintes linhas:
 
-Remoção de pontuações.
-Tokenização do texto.
-Remoção de stopwords.
-Lematização das palavras.
-Geração da Lista Invertida
-A geração da lista invertida envolve as seguintes etapas:
+LEIA=data/documentos_xml/cf74.xml
+LEIA=data/documentos_xml/cf75.xml
+LEIA=data/documentos_xml/cf76.xml
+LEIA=data/documentos_xml/cf77.xml
+LEIA=data/documentos_xml/cf78.xml
+LEIA=data/documentos_xml/cf79.xml
+ESCREVA=resultados/lista_invertida.csv
+Execução
+Para executar o gerador de lista invertida, utilize o seguinte comando:
 
-Iteração sobre os documentos XML.
-Extração do texto dos documentos.
-Construção da lista invertida das palavras nos documentos.
-Gravação da lista invertida em um arquivo CSV.
+
+python gerador_lista_invertida.py
+Indexador
+O módulo indexador.py indexa documentos em formato XML usando o modelo vetorial com TF-IDF. Ele pré-processa o texto dos documentos, calcula as frequências de termos e gera um arquivo CSV com a representação do modelo vetorial.
+
+Arquivo de Configuração
+O arquivo de configuração config/index.cfg contém as seguintes linhas:
+
+bash
+
+LEIA=data/documentos_xml/arquivo1.xml
+LEIA=data/documentos_xml/arquivo2.xml
+ESCREVA=resultados/modelo_vetorial.csv
+arquivo_log=src/logs/indexador.log
+Execução
+Para executar o indexador, utilize o seguinte comando:
+
+
+python indexador.py
+Este código foi desenvolvido como parte de um projeto de busca e mineração de texto e pode ser adaptado e expandido conforme necessário.
+
+
+
+
+

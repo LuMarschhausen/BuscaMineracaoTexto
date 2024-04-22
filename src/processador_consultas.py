@@ -24,22 +24,16 @@ lemmatizer = WordNetLemmatizer()
 
 # Pré-processamento texto da consulta
 def preprocess_text(text):
-    # Remover pontuações
-    text = text.translate(str.maketrans('', '', string.punctuation))
+    # Remover pontuações e números
+    text = ''.join([char.upper() if char.isalpha() else ' ' for char in text])
     # Tokenização
     tokens = word_tokenize(text)
     # Remover stopwords
-    filtered_tokens = [word for word in tokens if word.lower() not in stopwords.words('english')]
-    # Lematização
-    lemmatized_tokens = [lemmatizer.lemmatize(word) for word in filtered_tokens]
-    return ' '.join(lemmatized_tokens)
-
-# Função para somar os dígitos de uma string de tamanho 4
-def sum_digits(string):
-    total = 0
-    for digit in string:
-        total += int(digit)
-    return total
+    stop_words = set(stopwords.words('english'))
+    filtered_tokens = [lemmatizer.lemmatize(word) for word in tokens if word.lower() not in stop_words and len(word) > 1]
+    # Remover palavras específicas
+    filtered_tokens = [word for word in filtered_tokens if word not in ['CF', 'PATIENTS']]
+    return filtered_tokens
 
 # Função para registrar o tempo atual
 def log_current_time():
@@ -94,21 +88,20 @@ def process_queries(config_file):
 
             # Iterar sobre as consultas
             for query in root.findall('QUERY'):
-                query_number = query.find('QueryNumber').text
+                query_number = str(int(query.find('QueryNumber').text))  # Remover zeros à esquerda
                 query_text = query.find('QueryText').text
                 
                 # Pré-processamento do texto da consulta
                 processed_query_text = preprocess_text(query_text)
                 
                 # Escrever nos arquivos CSV
-                processed_writer.writerow([query_number, processed_query_text])
+                processed_writer.writerow([query_number, ' '.join(processed_query_text)])
                 
                 # Iterar sobre os resultados esperados
                 for item in query.findall('Records/Item'):
                     doc_number = item.text
                     doc_votes = item.get('score')
-                    doc_votes_sum = sum_digits(doc_votes)
-                    expected_writer.writerow([query_number, doc_number, doc_votes_sum])
+                    expected_writer.writerow([query_number, doc_number, doc_votes])
             
             # Logging: Fim do processamento
             end_time = time.time()

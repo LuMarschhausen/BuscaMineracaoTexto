@@ -1,0 +1,12 @@
+2024-04-22 17:37:41,099 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 17:39:47,612 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 17:40:17,600 - INFO - Iniciando geração da lista invertida.
+2024-04-22 17:40:17,622 - ERROR - Ocorreu um erro durante a geração da lista invertida: 'NoneType' object has no attribute 'text'
+2024-04-22 17:41:22,758 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 17:41:38,748 - INFO - Iniciando geração da lista invertida.
+2024-04-22 17:41:38,859 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.11 segundos.
+2024-04-22 17:45:15,771 - INFO - Iniciando geração da lista invertida.
+2024-04-22 17:45:15,885 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.11 segundos.
+2024-04-22 17:47:23,819 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 17:47:33,119 - INFO - Iniciando geração da lista invertida.
+2024-04-22 17:47:33,236 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.12 segundos.
