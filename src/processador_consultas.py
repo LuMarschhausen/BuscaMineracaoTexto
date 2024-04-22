@@ -34,6 +34,13 @@ def preprocess_text(text):
     lemmatized_tokens = [lemmatizer.lemmatize(word) for word in filtered_tokens]
     return ' '.join(lemmatized_tokens)
 
+# Função para somar os dígitos de uma string de tamanho 4
+def sum_digits(string):
+    total = 0
+    for digit in string:
+        total += int(digit)
+    return total
+
 # Função para registrar o tempo atual
 def log_current_time():
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -50,7 +57,7 @@ def process_queries(config_file):
         output_expected_file = None
 
         # Leitura do arquivo de configuração
-        logging.info('Lendo arquivo de configuração.')
+        logging.info('Lendo arquivo de configuracao.')
         with open(config_file, 'r') as f:
             lines = f.readlines()
             for line in lines:
@@ -62,7 +69,7 @@ def process_queries(config_file):
                     output_expected_file = line.split('=')[1].strip()
         
         if xml_file is None or output_processed_file is None or output_expected_file is None:
-            logging.error('Arquivo de configuração incompleto. Certifique-se de incluir as instruções LEIA, CONSULTAS e ESPERADOS.')
+            logging.error('Arquivo de configuracao incompleto. Certifique-se de incluir as instruções LEIA, CONSULTAS e ESPERADOS.')
             return
 
         # Abrir arquivos CSV para escrever
@@ -100,13 +107,14 @@ def process_queries(config_file):
                 for item in query.findall('Records/Item'):
                     doc_number = item.text
                     doc_votes = item.get('score')
-                    expected_writer.writerow([query_number, doc_number, doc_votes])
+                    doc_votes_sum = sum_digits(doc_votes)
+                    expected_writer.writerow([query_number, doc_number, doc_votes_sum])
             
             # Logging: Fim do processamento
             end_time = time.time()
             elapsed_time = end_time - start_time
-            logging.info(f'Processamento das consultas concluído. Tempo total: {elapsed_time:.2f} segundos.')
-            logging.info(f'Número total de consultas processadas: {total_queries}')
+            logging.info(f'Processamento das consultas concluido. Tempo total: {elapsed_time:.2f} segundos.')
+            logging.info(f'Numero total de consultas processadas: {total_queries}')
 
     except Exception as e:
         # Logging: Erro durante o processamento
