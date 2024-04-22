@@ -97,9 +97,9 @@ def process_queries(config_file):
                 processed_writer.writerow([query_number, processed_query_text])
                 
                 # Iterar sobre os resultados esperados
-                for item in query.findall('Results/Item'):
-                    doc_number = item.find('DocNumber').text
-                    doc_votes = item.find('DocVotes').text
+                for item in query.findall('Records/Item'):
+                    doc_number = item.text
+                    doc_votes = item.get('score')
                     expected_writer.writerow([query_number, doc_number, doc_votes])
             
             # Logging: Fim do processamento
