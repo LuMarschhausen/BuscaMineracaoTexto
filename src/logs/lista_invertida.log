@@ -30,3 +30,23 @@
 2024-04-22 23:31:59,795 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
 2024-04-23 12:50:09,964 - INFO - Iniciando geração da lista invertida.
 2024-04-23 12:50:14,171 - INFO - Lista invertida gerada com sucesso. Tempo total: 4.21 segundos.
+2024-04-23 12:56:01,933 - INFO - Iniciando geração da lista invertida.
+2024-04-23 12:56:02,894 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.96 segundos.
+2024-04-23 12:56:33,003 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 12:56:34,001 - INFO - Lista invertida gerada com sucesso. Tempo total: 1.00 segundos.
+2024-04-23 13:43:01,065 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 13:43:02,020 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.96 segundos.
+2024-04-23 13:44:46,421 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 13:44:47,425 - INFO - Lista invertida gerada com sucesso. Tempo total: 1.00 segundos.
+2024-04-23 14:17:58,842 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 14:17:59,821 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.98 segundos.
+2024-04-23 14:19:28,290 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 14:19:29,307 - INFO - Lista invertida gerada com sucesso. Tempo total: 1.02 segundos.
+2024-04-23 14:20:37,251 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 14:20:38,245 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.99 segundos.
+2024-04-23 14:22:26,613 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 14:22:27,604 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.99 segundos.
+2024-04-23 14:23:48,769 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 14:23:49,745 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.98 segundos.
+2024-04-23 14:25:39,847 - INFO - Iniciando geracao da lista invertida.
+2024-04-23 14:25:40,825 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.98 segundos.

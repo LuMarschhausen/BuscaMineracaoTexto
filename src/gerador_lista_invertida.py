@@ -36,7 +36,7 @@ def preprocess_text(text):
 def generate_inverted_index(xml_files, output_file):
     try:
         # Logging: Início da geração da lista invertida
-        logging.info('Iniciando geração da lista invertida.')
+        logging.info('Iniciando geracao da lista invertida.')
         start_time = time.time()
 
         # Dicionário para armazenar a lista invertida
@@ -73,7 +73,10 @@ def generate_inverted_index(xml_files, output_file):
             writer = csv.writer(csvfile, delimiter=';')
             writer.writerow(['Palavra', 'Documentos'])
             for word, docs in sorted(inverted_index.items()):
-                writer.writerow([word, sorted(docs)])
+                # Remover zeros à esquerda dos números dos documentos
+                docs_str = [str(int(doc)) for doc in docs]
+                doc_str = str(docs_str).replace("'", "")
+                writer.writerow([word, doc_str])
 
         # Logging: Fim da geração da lista invertida
         end_time = time.time()
