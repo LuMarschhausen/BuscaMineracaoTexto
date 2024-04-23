@@ -6,3 +6,28 @@
 2024-04-22 16:45:16,110 - INFO - Indexacao concluida com sucesso.
 2024-04-22 16:57:54,714 - INFO - Iniciando indexacao dos documentos.
 2024-04-22 16:57:54,839 - INFO - Indexacao concluida com sucesso.
+2024-04-23 12:26:37,489 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:26:37,492 - DEBUG - Lendo arquivo de configuração (INDEX.CFG)
+2024-04-23 12:27:12,417 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:27:12,417 - DEBUG - Lendo arquivo de configuração (config/index.cfg)
+2024-04-23 12:27:12,419 - DEBUG - Lendo arquivo CSV (esultados/lista_invertida.cs)
+2024-04-23 12:31:57,689 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:31:57,690 - DEBUG - Lendo arquivo de configuração (config/index.cfg)
+2024-04-23 12:31:57,690 - DEBUG - Lendo arquivo CSV (resultados/lista_invertida.cs)
+2024-04-23 12:32:12,742 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:32:12,742 - DEBUG - Lendo arquivo de configuração (config/index.cfg)
+2024-04-23 12:32:12,742 - DEBUG - Lendo arquivo CSV (resultados/lista_invertida.cs)
+2024-04-23 12:33:46,761 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:35:56,651 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:39:29,450 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:39:29,450 - DEBUG - Lendo arquivo de configuracao (config/index.cfg)
+2024-04-23 12:39:29,450 - DEBUG - Lendo arquivo CSV (resultados/lista_invertida.csv)
+2024-04-23 12:42:17,268 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:42:17,268 - DEBUG - Lendo arquivo de configuracao (config/index.cfg)
+2024-04-23 12:42:17,268 - DEBUG - Lendo arquivo CSV (resultados/lista_invertida.csv)
+2024-04-23 12:43:40,866 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:43:40,866 - DEBUG - Lendo arquivo de configuracao (config/index.cfg)
+2024-04-23 12:43:40,866 - DEBUG - Lendo arquivo CSV (resultados/lista_invertida.csv)
+2024-04-23 12:50:36,762 - DEBUG - Iniciando INDEXADOR
+2024-04-23 12:50:36,763 - DEBUG - Lendo arquivo de configuracao (config/index.cfg)
+2024-04-23 12:50:36,763 - DEBUG - Lendo arquivo CSV (resultados/lista_invertida.csv)

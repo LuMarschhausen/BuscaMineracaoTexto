@@ -28,3 +28,5 @@
 2024-04-22 23:27:49,166 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.12 segundos.
 2024-04-22 23:29:36,489 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
 2024-04-22 23:31:59,795 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-23 12:50:09,964 - INFO - Iniciando geração da lista invertida.
+2024-04-23 12:50:14,171 - INFO - Lista invertida gerada com sucesso. Tempo total: 4.21 segundos.
