@@ -10,3 +10,21 @@
 2024-04-22 17:47:23,819 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
 2024-04-22 17:47:33,119 - INFO - Iniciando geração da lista invertida.
 2024-04-22 17:47:33,236 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.12 segundos.
+2024-04-22 23:17:32,529 - INFO - Iniciando geração da lista invertida.
+2024-04-22 23:17:32,660 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.13 segundos.
+2024-04-22 23:18:46,503 - INFO - Iniciando geracao da lista invertida.
+2024-04-22 23:18:46,619 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.12 segundos.
+2024-04-22 23:21:07,924 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 23:21:23,612 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 23:21:49,040 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 23:22:04,368 - INFO - Iniciando geração da lista invertida.
+2024-04-22 23:22:04,478 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.11 segundos.
+2024-04-22 23:23:04,427 - INFO - Iniciando geração da lista invertida.
+2024-04-22 23:23:04,537 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.11 segundos.
+2024-04-22 23:24:46,689 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 23:25:04,728 - INFO - Iniciando geracao da lista invertida.
+2024-04-22 23:25:04,851 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.12 segundos.
+2024-04-22 23:27:49,045 - INFO - Iniciando geracao da lista invertida.
+2024-04-22 23:27:49,166 - INFO - Lista invertida gerada com sucesso. Tempo total: 0.12 segundos.
+2024-04-22 23:29:36,489 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'
+2024-04-22 23:31:59,795 - ERROR - Erro ao ler o arquivo de configuração: [Errno 2] No such file or directory: 'config/lista_invertida.cfg'

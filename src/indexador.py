@@ -3,91 +3,85 @@ import csv
 import xml.etree.ElementTree as ET
 import logging
 import time
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from collections import defaultdict
 
 # Configuração do logger
-logging.basicConfig(filename='src/logs/lista_invertida.log', level=logging.INFO,
+logging.basicConfig(filename='src/logs/indexador.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
-
-# Função para registrar o tempo atual
-def log_current_time():
-    return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 # Pré-processamento texto do documento
 def preprocess_text(text):
     # Tokenização
-    tokens = text.split()
-    # Remoção de caracteres especiais e conversão para maiúsculas
-    processed_tokens = [token.upper().strip(',.?!') for token in tokens]
-    # Remoção de stopwords
-    stop_words = set(stopwords.words('english'))
-    filtered_tokens = [token for token in processed_tokens if token not in stop_words and len(token) > 1]
-    # Ordenar e remover duplicatas
-    filtered_tokens = sorted(set(filtered_tokens))
-    return filtered_tokens
+    tokens = word_tokenize(text)
 
-# Gerar lista invertida a partir de documentos XML
-def generate_inverted_index(xml_files, output_file):
+    # Remoção de stopwords e tokens com menos de 2 caracteres
+    stop_words = set(stopwords.words('english'))
+    tokens_sem_stopwords = [token for token in tokens if token.lower() not in stop_words and len(token) > 1]
+
+    return tokens_sem_stopwords
+
+# Indexar documentos
+def indexar_documentos(documentos, arquivo_saida):
     try:
-        # Logging: Início da geração da lista invertida
-        logging.info('Iniciando geração da lista invertida.')
+        # Logging: Início da indexação dos documentos
+        logging.info("Iniciando indexação dos documentos.")
         start_time = time.time()
 
-        # Dicionário para armazenar a lista invertida
-        inverted_index = {}
+        # Dicionário para armazenar o índice
+        indice = defaultdict(list)
 
-        # Iterar sobre os arquivos XML
-        for xml_file in xml_files:
-            tree = ET.parse(xml_file)
-            root = tree.getroot()
+        # Iterar sobre os documentos e indexá-los
+        for i, documento in enumerate(documentos):
+            documento_preprocessado = preprocess_text(documento)
+            for termo in documento_preprocessado:
+                indice[termo].append(i + 1)  # Adiciona o número do documento ao índice
 
-            # Iterar sobre os elementos XML
-            for record in root.findall('RECORD'):
-                record_num = record.find('RECORDNUM').text.strip()
-                abstract = record.find('ABSTRACT').text
-                if abstract is None:
-                    abstract = record.find('EXTRACT').text
-                if abstract is not None:
-                    # Pré-processamento do texto do documento
-                    tokens = preprocess_text(abstract)
-                    # Atualizar a lista invertida
-                    for token in tokens:
-                        if token not in inverted_index:
-                            inverted_index[token] = [record_num]
-                        else:
-                            inverted_index[token].append(record_num)
+        # Escrever o índice no arquivo CSV
+        with open(arquivo_saida, 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Termo', 'Documentos'])
+            for termo, documentos in sorted(indice.items()):
+                writer.writerow([termo, documentos])
 
-        # Escrever a lista invertida no arquivo CSV
-        with open(output_file, 'w', newline='') as csvfile:
-            writer = csv.writer(csvfile, delimiter=';')
-            for word, docs in sorted(inverted_index.items()):
-                writer.writerow([word, sorted(docs)])
-
-        # Logging: Fim da geração da lista invertida
+        # Logging: Fim da indexação dos documentos
         end_time = time.time()
         elapsed_time = end_time - start_time
-        logging.info(f'Lista invertida gerada com sucesso. Tempo total: {elapsed_time:.2f} segundos.')
+        logging.info(f"Indexação concluída com sucesso. Tempo total: {elapsed_time:.2f} segundos.")
 
     except Exception as e:
-        # Logging: Erro durante a geração da lista invertida
-        logging.error('Ocorreu um erro durante a geração da lista invertida: {}'.format(str(e)))
+        # Logging: Erro durante a indexação dos documentos
+        logging.error(f"Ocorreu um erro durante a indexação dos documentos: {str(e)}")
 
-# Teste do módulo Lista Invertida
+# Teste do módulo Indexador
 if __name__ == "__main__":
     # Arquivo de configuração
-    config_file = 'config/lista_invertida.cfg'
+    arquivo_configuracao = "config/index.cfg"
 
     # Ler as configurações do arquivo de configuração
-    try:
-        with open(config_file, 'r') as f:
-            lines = f.readlines()
-            for line in lines:
-                if line.startswith('LEIA='):
-                    xml_files = line.split('=')[1].strip().split(',')
-                elif line.startswith('ESCREVA='):
-                    output_file = line.split('=')[1].strip()
-    except Exception as e:
-        logging.error('Erro ao ler o arquivo de configuração: {}'.format(str(e)))
-        exit()
+    configuracoes = {}
+    with open(arquivo_configuracao, 'r') as f:
+        for linha in f:
+            chave, valor = linha.strip().split('=')
+            configuracoes[chave.strip()] = valor.strip()
 
-    # Gerar lista invertida
-    generate_inverted_index(xml_files, output_file)
+    # Obter os caminhos dos arquivos XML a serem processados
+    arquivos_xml = [configuracoes[chave] for chave in configuracoes if chave.startswith("LEIA")]
+
+    # Ler os documentos dos arquivos XML
+    documentos = []
+    for arquivo_xml in arquivos_xml:
+        tree = ET.parse(arquivo_xml)
+        root = tree.getroot()
+        for registro_xml in root.findall('RECORD'):
+            abstract_element = registro_xml.find('ABSTRACT')
+            if abstract_element is not None:
+                texto_abstract = abstract_element.text.strip()
+                documentos.append(texto_abstract)
+
+    # Arquivo de saída
+    arquivo_saida = configuracoes.get("ESCREVA")
+
+    # Indexar os documentos
+    indexar_documentos(documentos, arquivo_saida)

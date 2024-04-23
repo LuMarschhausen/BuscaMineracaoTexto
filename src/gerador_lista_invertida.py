@@ -3,24 +3,31 @@ import csv
 import xml.etree.ElementTree as ET
 import logging
 import time
-import re
 from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+import string
 
 # Configuração do logger
 logging.basicConfig(filename='src/logs/lista_invertida.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Inicialização do lematizador do NLTK
+lemmatizer = WordNetLemmatizer()
+
 # Pré-processamento texto do documento
 def preprocess_text(text):
-    # Remover pontuações e caracteres especiais
-    text = re.sub(r'[^\w\s]', '', text)
+    # Remoção de caracteres especiais e conversão para maiúsculas
+    text = text.translate(str.maketrans('', '', string.punctuation)).upper()
+    # Remoção de números
+    text = ''.join([i for i in text if not i.isdigit()])
     # Tokenização
-    tokens = text.split()
-    # Conversão para maiúsculas
-    processed_tokens = [token.upper() for token in tokens]
-    # Remoção de stopwords
+    tokens = word_tokenize(text)
+    # Lematização
+    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens]
+    # Remoção de stopwords e tokens com menos de 5 caracteres
     stop_words = set(stopwords.words('english'))
-    filtered_tokens = [token for token in processed_tokens if token not in stop_words and len(token) > 1]
+    filtered_tokens = [token for token in lemmatized_tokens if token not in stop_words and len(token) > 4]
     # Ordenar e remover duplicatas
     filtered_tokens = sorted(set(filtered_tokens))
     return filtered_tokens
