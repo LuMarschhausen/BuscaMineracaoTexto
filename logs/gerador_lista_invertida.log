@@ -27,3 +27,6 @@
 2024-04-21 21:31:16,581 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf78.xml
 2024-04-21 21:31:16,598 - INFO - Lendo arquivo XML: C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\data\\documentos_xml\\cf79.xml
 2024-04-21 21:31:16,617 - INFO - Escrevendo lista invertida em C:\\Users\\Luisa\\Documents\\GitHub\\BuscaMineracaoTexto\\resultados\\lista_invertida.csv
+DEBUG:root:Iniciando indexação
+DEBUG:root:Lendo arquivo de configuração (config/index.cfg)
+DEBUG:root:Lendo arquivo XML (resultados/lista_invertida.csv)
